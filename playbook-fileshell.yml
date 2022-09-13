@@ -1,0 +1,12 @@
+- name: A simple file playbook
+  hosts: localhost
+  gather_facts: yes
+  connection: local
+
+  tasks:
+   - name: use shell module with wildcarding
+     copy:
+       src: ~/mycode/playbook2.yml
+       dest: ~/mycode/copy_playbook
+       backup: yes
+       mode: '0644'

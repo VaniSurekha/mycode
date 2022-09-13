@@ -1,0 +1,13 @@
+- name: Tuesday Challenge
+  hosts: bender
+  connection: ssh
+  gather_facts: yes
+
+  tasks:
+   - name: print out the variable named "result"
+     debug: # the debug module is similar to print() in python-- it prints stuff out!
+       var: ansible_user # displaying the value of the variable "result"
+   - name : print a message
+     debug:
+       msg: "print this message!!!"
+     register: messsage # create new var and stores the output
