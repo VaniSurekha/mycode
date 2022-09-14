@@ -1,0 +1,11 @@
+- name: Replace line in file examples
+  hosts: localhost
+  connection: local
+  tasks:
+   - name: "Replace line in file examples"
+     become: yes
+     replace: 
+       path: /home/student/mycode/challenge/downloadme.txt 
+       regexp: '^PLACEHOLDER'
+       replace: 'Vani'
+       backup: yes
